@@ -1,0 +1,34 @@
+{%extends "crudapp/base.html"%}
+
+{%block content%}
+
+  
+  <h2>
+    {%if form.instance.person_id%}
+      Create
+    {%else%}
+      Update
+    {%endif%}
+     Person</h2>
+
+
+  <form method="post">
+    {% csrf_token%}
+    {{form.as_p}}
+
+    <button name="Submit">Save Changes</button>
+  </form>
+
+
+  <h2>Delete Person</h2>
+
+  <form  action ={% url 'crudapp:delete_person' person.id %}  method="post">
+      {%csrf_token%}
+      {%comment%}{{form.as_p}}{%endcomment%}
+      <button type="submit">Delete Person</button>
+  </form>
+
+  
+
+
+  {%endblock content%}

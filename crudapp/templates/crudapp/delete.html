@@ -1,0 +1,9 @@
+ {%block content%}
+  <form  action={% url 'crudapp:delete_person'  person.id %} method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+   
+    <button type="submit">Delete person</button>
+   
+  </form>
+{%endblock content%}

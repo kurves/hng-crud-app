@@ -1,0 +1,17 @@
+{%block content%}
+    {%comment%}<h2>
+        {%if form.instance.person_id%}
+          Create
+        {%else%}
+          Update
+        {%endif%}
+         Person</h2>
+{%endcomment%}
+    <form action ={% url 'crudapp:update_person' person.id%} method="post">
+        {% csrf_token%}
+        {{form.as_p}}
+    
+        <button name="Submit">Change Details</button>
+      </form>
+
+{%endblock content%}      

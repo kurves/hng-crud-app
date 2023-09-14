@@ -1,0 +1,31 @@
+
+
+{%block content%}
+<p>People</p>
+
+  <ul>
+    {%for person in  persons%}
+        <li>
+           <a style="text-decoration:none", href={% url 'crudapp:person' person.id %}>{{person}}</a> 
+        </li>      
+        
+    
+    {%empty%}
+        <li>No name added</li>
+    {%endfor%}  
+  </ul>
+
+
+  <p>Add a new Person</p>
+
+  <form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">Create Person</button>
+    
+  </form>
+
+ 
+
+{%endblock content%}  
+

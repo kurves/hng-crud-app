@@ -1,0 +1,53 @@
+{%extends "crudapp/base.html"%}
+{%block content%}
+
+
+<ul>
+    {%for person in results%}
+    <h4>Name:</h4>
+      <p>{{person}}</p>
+      <p>Details: </p>
+      {%if person.details%}
+  
+        <p>{{person.details}}</p>
+      {%else%}
+  
+        <p> No details available for this person </p>
+      {%endif%}
+        
+        <form action ={% url 'crudapp:update_person' person.id %} method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <button type="submit">Update Person</button>
+        </form> 
+    
+      <h2>Delete Person</h2>
+  
+      <form  action ={% url 'crudapp:delete_person' person.id %}  method="post">
+          {%csrf_token%}
+          {%comment%}{{form.as_p}}{%endcomment%}
+          <button type="submit">Delete Person</button>
+      </form>
+
+
+    {%empty%}
+      <h3> Name not Found</h3>
+
+      <h3>Create New Person</h3>
+    
+      <form action ={% url 'crudapp:new_person'  %} method="post">
+        {% csrf_token%}
+        {{form.as_p}}
+
+          <button name="Submit">Create new Person</button>
+      </form>
+
+    {%endfor%}    
+</ul>
+
+
+
+
+{%endblock content%}
+
+{%comment%}method ="get" action={% url 'crudapp:search_person' <person.name>> %}{%endcomment%}
