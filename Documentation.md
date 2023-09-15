@@ -117,3 +117,17 @@ Response
 `PUT /api/<id>` :   Update a specific person's details \
 `DELETE /api/<id>` :    Delete a specific person \
 `PATCH /api/<id>` :   Update a specific person details
+
+ List all Items:
+ 
+ ```curl -X GET http://localhost:8000/api/```
+
+ Retreive a person by ID:
+ 
+ ```curl -X GET http://localhost:8000/api/33/```
+
+ Delete a specific person :
+
+ ```curl -X DELETE http://localhost:8000/api/33/```
+
+
