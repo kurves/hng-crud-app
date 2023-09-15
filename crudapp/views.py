@@ -18,11 +18,11 @@ class PersonListView(generics.ListCreateAPIView):
     queryset =Person.objects.all()
     serializer_class =PersonSerializer
 
-class CreateUpdateView(generics.UpdateAPIView,generics.RetrieveUpdateDestroyAPIView,generics.ListCreateAPIView):
+class CreateUpdateView(generics.UpdateAPIView,generics.RetrieveUpdateDestroyAPIView):
     queryset=Person.objects.all()
     serializer_class= PersonSerializer    
 
-class PersonRetrieveByName(generics.RetrieveAPIView,generics.RetrieveUpdateDestroyAPIView,generics.UpdateAPIView,generics.ListCreateAPIView):
+class PersonRetrieveByName(generics.RetrieveAPIView,generics.RetrieveUpdateDestroyAPIView,generics.UpdateAPIView):
     queryset=Person.objects.all()
     serializer_class=PersonSerializer    
     lookup_field="name"
