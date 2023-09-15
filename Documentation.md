@@ -131,3 +131,38 @@ Response
  ```curl -X DELETE http://localhost:8000/api/33/```
 
 
+ ## Setting Up and Running the API on a local Server
+Python 3x is installed
+A virtual Environment is set up using \
+```virtualenv crudapp``` \
+Activate your Virtual Environment using \
+```crudapp\scripts\activate``` 
+
+Clone the repository
+
+Install Django using \
+```pip install django```
+Install Rest framework using \
+```pip install djangorestframework```
+
+## Set Up
+Apply migrations using
+
+```python manage.py migrate```
+
+Create super user
+
+```python manage.py createsuperuser```
+
+
+Run development server
+
+```python manage.py runserver```
+
+## Run the API
+
+Access the API at 'http://localhost:8000/'
+
+ 
+
+
