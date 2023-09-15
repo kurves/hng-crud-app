@@ -163,6 +163,11 @@ Run development server
 
 Access the API at 'http://localhost:8000/'
 
+## Assumptions made
+
+### Error handling
+
+Assumptions are made about how errors will be commmunicated to the clients which we assume when creating an API that clients understand the different HTTP status codes used.
  
 
 
