@@ -106,3 +106,14 @@ Response
   Response
 
   statusCode: 204 NO CONTENT
+
+
+  Sample Usage
+
+`GET /api/` :   Get all the names \
+`GET /api/<id>/ `:   Access a specific person by ID \
+`GET /api/<str:name>` :   Access a specific person by name \
+`POST /api/<id>` :   Create a new Person \
+`PUT /api/<id>` :   Update a specific person's details \
+`DELETE /api/<id>` :    Delete a specific person \
+`PATCH /api/<id>` :   Update a specific person details
