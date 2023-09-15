@@ -19,6 +19,8 @@ A virtual Environment is set up using \
 Activate your Virtual Environment using \
 ```crudapp\scripts\activate``` 
 
+Clone the repository
+
 Install Django using \
 ```pip install django```
 Install Rest framework using \
