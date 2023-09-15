@@ -12,7 +12,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
 
 def  index(request):
-    return render(request,'crudapp/index.html')
+    return render(request,'index.html')
    
 class PersonListView(generics.ListCreateAPIView):
     queryset =Person.objects.all()
